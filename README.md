@@ -27,7 +27,8 @@ Run QdrantQdrant is used as the vector database. The easiest way to run it is vi
 Start the FastAPI application:uvicorn main:app --reload
 You should see output indicating that Uvicorn is running on http://127.0.0.1:8000.API Endpoint.
 
-## Agent QueryInteracts with the RAG-based agent, leveraging conversational memory and tools.Endpoint: /agent_queryMethod: POSTRequest Body (JSON):{
+# Agent Query
+Interacts with the RAG-based agent, leveraging conversational memory and tools.Endpoint: /agent_queryMethod: POSTRequest Body (JSON):{
   "query": "What is FastAPI?",
   "session_id": "user_session_abc123"
 }
@@ -37,7 +38,8 @@ curl command (Linux/macOS):curl -X POST -H "Content-Type: application/json" -d '
 }' http://127.0.0.1:8000/agent_query
 curl command (Windows cmd/PowerShell):curl -X POST -H "Content-Type: application/json" -d "{ \"query\": \"What is FastAPI?\", \"session_id\": \"user_session_abc123\" }" http://127.0.0.1:8000/agent_query
 
-## Book InterviewBooks an interview appointment and sends a confirmation email.Endpoint: /book_interviewMethod: POSTRequest Body (JSON):{
+# Book Interview
+Books an interview appointment and sends a confirmation email.Endpoint: /book_interviewMethod: POSTRequest Body (JSON):{
   "full_name": "Jane Doe",
   "email": "jane.doe@example.com",
   "date": "2025-08-30",
@@ -51,7 +53,8 @@ curl command (Linux/macOS):curl -X POST -H "Content-Type: application/json" -d '
 }' http://127.0.0.1:8000/book_interview
 curl command (Windows cmd/PowerShell):curl -X POST -H "Content-Type: application/json" -d "{ \"full_name\": \"Jane Doe\", \"email\": \"jane.doe@example.com\", \"date\": \"2025-08-30\", \"time\": \"15:30\" }" http://127.0.0.1:8000/book_interview
 
-## Compare Similarity AlgorithmsCompares Cosine and Euclidean similarity search results in Qdrant for a given query.Endpoint: /compare_similarity_algorithmsMethod: POSTRequest Body (JSON):{
+# Compare Similarity Algorithms
+Compares Cosine and Euclidean similarity search results in Qdrant for a given query.Endpoint: /compare_similarity_algorithmsMethod: POSTRequest Body (JSON):{
   "query_text": "What is AI?",
   "top_k": 3
 }
